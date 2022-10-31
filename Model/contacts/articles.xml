@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!-- make standalone no: no = default -->
+<!DOCTYPE articles SYSTEM "articles.dtd">
+
+<articles>
+
+<article id="1">
+<articleTitle>'He was daring, brave': the story behind Ferran To...</articleTitle>
+<articleDescription>The usual routine here is for a former teammate to...</articleDescription>
+<articleLink>https://www.theguardian.com/football/2020/oct/31/ferran-torres-manchester-city-valencia-story-behind-his-rise</articleLink>
+</article>
+
+<article id="2">
+<articleTitle>Harry Maguire says social media criticism of perfo...</articleTitle>
+<articleDescription>The Manchester United captain Harry Maguire insist..</articleDescription>
+<articleLink>https://www.theguardian.com/football/2020/nov/03/harry-maguire-says-social-media-criticism-of-performances-has-no-effect</articleLink>
+</article>
+
+<article id="3">
+<articleTitle>Squad rotation for Gunnersaurus with new roster to...</articleTitle>
+<articleDescription>A roster of people will now fill the role of Gunne...</articleDescription>
+<articleLink>https://www.standard.co.uk/sport/football/gunnersaurus-arsenal-mascot-return-new-roster-dinosaur-b63675.html</articleLink>
+</article>
+
+<article id="4">
+<articleTitle>Chelsea's Frank Lampard denies doubting Christian ..</articleTitle>
+<articleDescription>Frank Lampard has denied he was slow to trust Chri...</articleDescription>
+<articleLink>https://www.theguardian.com/football/2020/oct/29/chelsea-frank-lampard-denies-doubting-christian-pulisic-quality</articleLink>
+</article>
+
+<article id="5">
+<articleTitle>Alberto Aquilani: 'We lost so what I did for Liver...</articleTitle>
+<articleDescription>In football, as in life, there are moments when yo...</articleDescription>
+<articleLink>https://www.theguardian.com/football/2020/nov/10/alberto-aquilani-we-lost-so-what-i-did-for-liverpool-was-forgotten</articleLink>
+</article>
+
+<article id="6">
+<articleTitle>Tottenham to start talks with Son Heung-min on £20...</articleTitle>
+<articleDescription>Tottenham are to open talks with Son Heung-min’s n...</articleDescription>
+<articleLink>https://www.theguardian.com/football/2020/nov/11/tottenham-start-talks-son-heung-min-200000-a-week-deal</articleLink>
+</article>
+
+
+</articles>

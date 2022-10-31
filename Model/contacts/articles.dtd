@@ -1,0 +1,11 @@
+<!DOCTYPE articles [
+  <!ELEMENT articles (article+) >
+  <!ELEMENT article (articleTitle, articleDescription, articleLink) >
+  <!ATTLIST article id CDATA #REQUIRED >
+
+  <!ELEMENT articleTitle (#PCDATA) >
+  <!ELEMENT articleDescription (#PCDATA) >
+  <!ELEMENT articleLink (#PCDATA) >
+  <!ATTLIST articleLink type CDATA #REQUIRED>
+
+]>

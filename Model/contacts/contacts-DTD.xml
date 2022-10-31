@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<!DOCTYPE contacts [
+  <!ELEMENT contacts (contact+) >
+  <!ELEMENT contact (name, description, addresses?,  phones?, emails?) >
+  <!ATTLIST contact id CDATA #REQUIRED >
+  <!ELEMENT name (#PCDATA) >
+  <!ELEMENT description (#PCDATA) >
+  <!ELEMENT addresses (address+) >
+  <!ELEMENT address (#PCDATA) >
+  <!ATTLIST address type CDATA #REQUIRED>
+  <!ELEMENT phones (phone+) >
+  <!ELEMENT phone (#PCDATA) >
+  <!ATTLIST phone type CDATA #REQUIRED>
+  <!ELEMENT emails (email+) >
+  <!ELEMENT email (#PCDATA) >
+  <!ATTLIST email type CDATA #REQUIRED>
+]>
+
+
+<contacts>
+
+<contact id="a510111">
+<name>Dr. Adam Adamson</name>
+<description>Lecturer in Computing</description>
+<addresses>
+  <address type="home">1 High Street, Dundee</address>
+</addresses>
+<phones>
+  <phone type="mobile">07770 111111</phone>
+  <phone type="home">01382 111111</phone>
+</phones>
+<emails>
+  <email type="home">a.adamson@gmail.com</email>
+  <email type="work">adam@work.com</email>
+</emails>
+</contact>
+
+<contact id="b5102222">
+<name>Dr. Brenda Brown</name>
+<description>Lecturer in Computing</description>
+<addresses>
+  <address type="home">2 High Street, Perth</address>
+</addresses>
+<phones>
+  <phone type="mobile">07770 222222</phone>
+  <phone type="home">01738 222222</phone>
+</phones>
+<emails>
+  <email type="home">b.brown@gmail.com</email>
+  <email type="work">brenda@work.com</email>
+</emails>
+</contact>
+
+<contact id="c5103333">
+<name>Mr. Charlie Crown</name>
+<description>Student</description>
+<addresses>
+  <address type="home">3 High Street, Cupar</address>
+</addresses>
+<phones>
+  <phone type="mobile">07770 333333</phone>
+</phones>
+<emails>
+  <email type="home">c.crown@gmail.com</email>
+  <email type="work">charlie@uni.com</email>
+</emails>
+</contact>
+
+<contact id="c5103333">
+<name>Ms. Dawn Davie</name>
+<description>Student</description>
+<addresses>
+  <address type="home">4 High Street, Dundee</address>
+</addresses>
+<phones>
+  <phone type="mobile">07770 444444</phone>
+</phones>
+<emails>
+  <email type="home">d.davie@gmail.com</email>
+  <email type="work">dawn@uni.com</email>
+</emails>
+</contact>
+
+</contacts>

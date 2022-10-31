@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns="http://abertay.co.uk/contacts"
+           targetNamespace="http://abertay.co.uk/contacts"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+
+  <!-- define the types -->
+  <xs:complexType name="contactsType">
+    <xs:sequence>
+      <xs:element ref="contact" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+
+
+  <xs:complexType name="contactType">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="description" type="xs:string"/>
+      <xs:element ref="addresses" />
+      <xs:element ref="phones" />
+      <xs:element ref="emails" />  
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType> 
+
+  <xs:complexType name="addressesType">
+    <xs:sequence>
+       <xs:element ref="address" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="phonesType">
+    <xs:sequence>
+       <xs:element ref="phone" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="emailsType">
+    <xs:sequence>
+       <xs:element ref="email" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+<!-- simple type  --> 
+  <xs:simpleType name="addressType" >
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="home" />
+      <xs:enumeration value="work" />
+      <xs:enumeration value="other" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="phoneType" >
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="home" />
+      <xs:enumeration value="mobile" />
+      <xs:enumeration value="work" />
+      <xs:enumeration value="other" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="locationType" >
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="home" />
+      <xs:enumeration value="work" />
+      <xs:enumeration value="other" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="phoneNoType" >
+    <xs:restriction base="xs:positiveInteger"> 
+      <xs:pattern value="0([0-9]{10})" />
+   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="emailType" >
+    <xs:restriction base="xs:string"> 
+    <xs:pattern value="[a-z A-Z][a-z A-Z 0-9 .]*@[a-z A-Z 0-9 .]*" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+<!-- define the elements -->
+  <xs:element name="contacts" type="contactsType"/>
+  <xs:element name="contact" type="contactType"/>
+  <xs:element name="addresses" type="addressesType" />
+  <xs:element name="address">
+  	<xs:complexType>
+  		<xs:simpleContent>
+  			<xs:extension base="xs:string">
+    			<xs:attribute name="type" type="addressType" use="required"/>
+    		</xs:extension>
+    	</xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="phones" type="phonesType" />
+  <xs:element name="phone"> 
+  	<xs:complexType>
+  		<xs:simpleContent>
+  			<xs:extension base="phoneNoType">
+    			 <xs:attribute name="type" type="phoneType" use="required"/>
+    		</xs:extension>
+    	</xs:simpleContent>
+    </xs:complexType>   
+  </xs:element>
+
+  <xs:element name="emails" type="emailsType" />
+   <xs:element name="email"> 
+  	<xs:complexType>
+  		<xs:simpleContent>
+  			<xs:extension base="emailType">
+    			 <xs:attribute name="type" type="locationType" use="required"/>
+    		</xs:extension>
+    	</xs:simpleContent>
+    </xs:complexType>   
+  </xs:element>
+
+  
+</xs:schema>
